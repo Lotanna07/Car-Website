@@ -92,17 +92,180 @@ img {
 }
 
 /*=============== HEADER & NAV ===============*/
+.header{
+  position:fixed;
+  width:100%;
+  top:0;
+  left:0;
+  background:var(--orange-color);
+  z-index:var(--z-fixed);
+}
+
+.nav{
+  position:relative;
+  height:var(--header-height);
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.nav--logo,
+.nav--link{
+  color:var(--white-color);
+  font-weight: var(--font-semi-bold);
+}
 
 
+.nav--toggle,
+.nav--close{
+  width:32px;
+  height:32px;
+  display: grid;
+  place-items:center;
+  border:2px solid var(--white-color);
+  border-radius:50%;
+  font-size:1.25rem;
+  cursor:pointer;
+}
+
+.nav--menu{
+  position:fixed;
+  top:0;
+  right:-100%;
+  background-color: hsla(210, 8%, 8%, .7);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  width:80%;
+  height:100%;
+  padding: 7rem 3.5rem;
+  transition: right .4s;
+}
+
+.nav--list{
+  display:flex;
+  flex-direction: column;
+  row-gap:3rem;
+}
+
+.nav--close{
+  position: absolute;
+  top:.8rem;
+  right:1.5rem;
+
+}
 /* Show menu */
+.show-menu{
+  right:0;
 
+
+}
 
 /* Add blur header */
 
 
 /*=============== HOME ===============*/
+.home--article{
+  position:relative;
+  padding-top:12rem;
+  width:100%;
+  height:100vh;
+}
+
+.home--panel-1{
+  width:100%;
+  height: 40%;
+  background-color:var(--color-car);
+  position: absolute;
+  left:0;
+  top:0;
+}
+.home--panel-2{
+  width:100%;
+  height: 60%;
+  background-color:var(--black-color);
+  position: absolute;
+  left:0;
+  bottom:0;
+}
+
+.home--content{
+  position: relative;
+  height: 100%;
+  display:grid;
+  align-content: space-between;
+  z-index:1;
+
+}
 
 
+.home--data{
+  position:relative;
+}
+
+.home--title{
+  width:max-content;
+  margin-inline:auto;
+}
+
+.home--subtitle{
+  font-size:var(--big-font-size);
+  font-family: var(--second-font);
+}
+
+.home--title{
+  font-size: var(--biggest-font-size);
+}
+
+.home--img{
+  max-width: initial;
+  width:400px;
+  position:absolute;
+  left:0;
+  bottom:-7.5rem;
+}
+
+.home--info{
+  padding-bottom:3rem;
+  text-align: center;
+  display:grid;
+  row-gap: 2rem;
+}
+
+.home--specs{
+  display: flex;
+  justify-content: center;
+  column-gap: 1.5rem;
+  font-weight: var(--font-semi-bold);
+  color:var(--color-car);
+}
+
+.home--button{
+  display:inline-flex;
+  justify-self:center;
+  align-items: center;
+  column-gap: .5rem;
+  border:2px solid var(--color-car);
+  padding:.75rem 1.5rem;
+  border-radius: 4rem;
+  color:var(--color-car);
+}
+
+.home--button span{
+  font-weight: var(--font-semi-bold);
+}
+
+.home--button i {
+  font-size:1.5rem;
+  transition: transform .4s;
+}
+
+.home--button:hover i{
+  transform: translateX(.5rem);
+}
+
+.home--interaction{
+  position: absolute;
+}
 /* Swiper class */
 
 
