@@ -29,9 +29,28 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 
 /*=============== SWIPER CAR ===============*/
+const swiperHome = new Swiper('.home--swiper', {
+   speed:1200,
+   effect:'fade',
 
+
+  pagination: {
+    el: '.swiper-pagination',
+   clickable:true,
+   renderBullet:  (index, className) => {
+      return '<span class="' + className + '">' + (index + 1).padstart(2, '0') + "</span>";
+      },
+  },
+});
 
 /*=============== GSAP ANIMATION ===============*/
 
 
 /*=============== ADD BLUR HEADER ===============*/
+const blurHeader = () =>{
+   const header = document.getElementById('header')
+   // Add the .scroll-header class if the bottom scroll of the viewport is greater than 50
+   this.scrollY >= 50 ? header.classList.add('blur-header') 
+                      : header.classList.remove('blur-header')
+}
+window.addEventListener('scroll', blurHeader)
