@@ -374,9 +374,122 @@ img {
 }
 
 /* For medium devices */
-@mi
+@media screen and (min-width: 450px){
+  .home--img{
+  left:0;
+  right:0;
+  margin:0 auto;
+  }
+
+}
 
 /* For large devices */
+@media screen and  (min-width:1150px){
+  .container{
+    margin-inline: auto;
+  }
 
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav--menu{
+    width:40%;
+    padding:10rem 4rem 0;
+  }
+
+  .nav--list{
+    row-gap: 4rem;
+  }
+  .nav--close{
+    top:1.7rem;
+  }
+
+  .home--panel-1{
+    width:35%;
+    height: 100%;
+  }
+  .home--panel-2{
+    width:65%;
+    height:100%;
+    left:initial;
+    right: 0;
+  }
+  .home--article{
+    padding-top: 4rem; 
+  }
+  .home--subtitle{
+    transform: translateY(3rem);
+  }
+  .home--img{
+    width:800px;
+    bottom:-11.5rem;
+    transform:translateX(20rem);
+  }
+  .home--info{
+    justify-content: flex-end;
+    grid-template-columns: repeat(2, max-content);
+    align-items: center;
+    column-gap: 6rem;
+    padding-bottom: 1rem;
+  }
+  .home--specs{
+    column-gap:3rem;
+  }
+  .home--interaction{
+    max-width: 1120px;
+    left:0;
+    right:0;
+    margin-inline:auto;
+  }
+  .home--social{
+    top:initial;
+    bottom:3rem;
+    left:0;
+    row-gap:1rem;
+  }
+  .home--social-border{
+    height:380px;
+    margin-bottom:3rem;
+  }
+  .swiper-pagination-bullets.swiper-pagination-horizontal{
+    width:initial;
+    height: max-content;
+    left:initial;
+    right:0;
+    top:0;
+    bottom:0;
+    margin: auto 0;
+    flex-direction: column;
+    row-gap:2rem;
+  }
+  
+}
 
 /* For taller devices */
+@media screen and (max-width: 1150px) and (min-height:800px){
+  .home--content{
+    align-content: space-around;
+    row-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 1150px) and (min-height:800px){
+  .home--article{
+    padding-top:7rem;
+  }
+  .home--info{
+    padding-bottom: 3rem;
+  }
+  .home--social{
+    bottom:4.5rem;
+  }
+}
+
+
+@media screen and (min-width: 1150px) and (min-height:1000px){
+  .swiper,
+  .home--article,
+  .home--interaction{
+    height:900px;
+  }
+}

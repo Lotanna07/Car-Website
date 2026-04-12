@@ -44,7 +44,11 @@ const swiperHome = new Swiper('.home--swiper', {
 });
 
 /*=============== GSAP ANIMATION ===============*/
-
+GPUSampler.from('.home--panel-1', {y:-1000, duration:2})
+GPUSampler.from('.home--panel-2', {y: 1000, duration:2})
+GPUSampler.from('.home--image', {x: 1000, duration:2})
+GPUSampler.from('.home--titles', {y: 100, opacity:0, delay:2})
+GPUSampler.from('.home--title', {y: 100, opacity:0, delay:2.1})
 
 /*=============== ADD BLUR HEADER ===============*/
 const blurHeader = () =>{
